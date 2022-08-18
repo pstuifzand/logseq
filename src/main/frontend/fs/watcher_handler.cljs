@@ -46,7 +46,6 @@
 
 (defn handle-changed!
   [type {:keys [dir path content stat] :as payload}]
-  (prn ::debug-handle-changed payload)
   (when dir
     (let [path (gp-util/path-normalize path)
           repo (config/get-local-repo dir)

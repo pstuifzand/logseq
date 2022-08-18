@@ -89,7 +89,7 @@
     (util/electron?)
     (ipc/ipc "backupDbFile" repo-url path db-content content)
 
-    (or (mobile/native-ios?) (mobile/native-android?))
+    (mobile/native-platform?)
     (capacitor-fs/backup-file-handle-changed! repo-url path db-content)
 
     :else
